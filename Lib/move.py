@@ -63,7 +63,7 @@ def add_root( path ):
 	
 def update( owm_path1, owm_path2, mid_path ):
 	print("发现文件更新：\t",owm_path1)
-    list_todo.append( path_todo(owm_path2,PATH_UPDATE +'/' +mid_path +'/' +os.path.basename(owm_path1) ) ) #创建备份
+	list_todo.append( path_todo(owm_path2,PATH_UPDATE +'/' +mid_path +'/' +os.path.basename(owm_path1) ) ) #创建备份
 	list_todo.append( path_todo(owm_path1,owm_path2) ) #复制到仓库中
 	
 
