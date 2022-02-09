@@ -25,6 +25,11 @@ class creat():
         self.logname = filename
 
     def save(self):
+        log_path,filename = os.path.split(self.logname)
+        if not os.path.exists(log_path): #如果保存log的目录不存在
+            print("log文件夹不存在")
+            os.makedirs(log_path)
+
         print(self.text)
         json_log = json.dumps(self.text, indent=4,ensure_ascii=False)
         print("\n",json_log, "\n")

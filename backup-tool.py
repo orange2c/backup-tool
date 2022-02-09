@@ -73,8 +73,9 @@ for i in roots:
     if not house_find : 
         print("不存在文件夹的备份，开始复制",root_one.my_path)
         move.add_root(root_one.my_path) 
-        log_history.add( root_one.my_path,   root_house.my_path, root_new=True)
+        #log_history.add( root_one.my_path,   root_house.my_path, root_new=True)
         continue
+
     root_house = directory( house_find )
     
     #如果存在，则进入遍历比较
